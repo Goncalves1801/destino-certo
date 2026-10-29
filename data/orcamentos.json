@@ -1,0 +1,28 @@
+[
+  {
+    "id": "4c0591e3-3357-4272-bbf4-4c9861ebdecf",
+    "nome": "Lucas Anderson",
+    "email": "gabrielcostagoncalves7@gmail.com",
+    "telefone": "",
+    "destino": "Lisboa",
+    "passageiros": "3",
+    "ida": "2026-10-19",
+    "volta": "2026-10-20",
+    "orcamento": "Acima de R$ 6.000",
+    "observacoes": "viajar",
+    "criadoEm": "2026-10-19T19:25:12.256Z"
+  },
+  {
+    "id": "6c8a3d1c-ad58-4451-9469-a5d620e4f9fb",
+    "nome": "Lucas Anderson",
+    "email": "gabrielcostagoncalves7@gmail.com",
+    "telefone": "",
+    "destino": "Lisboa",
+    "passageiros": "3",
+    "ida": "2026-10-19",
+    "volta": "2026-10-20",
+    "orcamento": "R$ 3.000 a R$ 6.000",
+    "observacoes": "dada",
+    "criadoEm": "2026-10-19T19:29:54.393Z"
+  }
+]

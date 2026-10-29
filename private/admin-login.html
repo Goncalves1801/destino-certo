@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Acesso administrativo | Destino Certo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="admin-auth-page">
+  <header class="topbar admin-auth-topbar">
+    <a class="brand" href="/">Destino Certo</a>
+    <a class="admin-back-link" href="/">Voltar ao site</a>
+  </header>
+
+  <main class="auth-layout">
+    <section class="panel auth-panel">
+      <div class="panel-heading">
+        <h1>Área do administrador</h1>
+        <p>Entre com suas credenciais para analisar as solicitações de viagem.</p>
+      </div>
+
+      <form id="admin-login-form">
+        <label for="usuario">Usuário</label>
+        <input id="usuario" name="usuario" type="text" autocomplete="username"
+               maxlength="80" required autofocus>
+
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" autocomplete="current-password"
+               maxlength="200" required>
+
+        <button class="submit-button" id="login-button" type="submit">Entrar</button>
+        <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="small-note">Somente a conta administrativa pode visualizar os dados enviados pelos clientes.</p>
+    </section>
+  </main>
+
+  <script src="/admin-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça destinos e solicite seu orçamento de viagem na Destino Certo.">
+  <title>Destino Certo | Agência de Viagens</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio">Destino Certo</a>
+    <nav aria-label="Navegação principal">
+      <a href="#destinos">Destinos</a>
+      <a href="#orcamento">Solicitar orçamento</a>
+      <a class="admin-access" href="/admin/login">Administrador ↗</a>
+    </nav>
+  </header>
+
+  <main id="inicio" class="layout">
+    <section class="panel destinations-panel" id="destinos">
+      <div class="panel-heading">
+        <h1>Destinos em destaque</h1>
+        <p>Escolha um lugar para planejar sua próxima viagem.</p>
+      </div>
+
+      <div id="destination-list" class="destination-list">
+        <article class="destination-item">
+          <div class="destination-photo rio"></div>
+          <div class="destination-info">
+            <h2>Rio de Janeiro</h2>
+            <p>Praias, cultura e paisagens inesquecíveis.</p>
+            <button class="text-button" data-destination="Rio de Janeiro">
+              Escolher destino →
+            </button>
+          </div>
+        </article>
+
+        <article class="destination-item">
+          <div class="destination-photo gramado"></div>
+          <div class="destination-info">
+            <h2>Gramado</h2>
+            <p>Natureza, gastronomia e clima acolhedor.</p>
+            <button class="text-button" data-destination="Gramado">
+              Escolher destino →
+            </button>
+          </div>
+        </article>
+
+        <article class="destination-item">
+          <div class="destination-photo lisboa"></div>
+          <div class="destination-info">
+            <h2>Lisboa</h2>
+            <p>História, arquitetura e novos sabores.</p>
+            <button class="text-button" data-destination="Lisboa">
+              Escolher destino →
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <p class="small-note">
+        Os destinos são sugestões. Consulte valores pelo formulário.
+      </p>
+    </section>
+
+    <section class="panel form-panel" id="orcamento">
+      <div class="panel-heading">
+        <h2>Solicitar orçamento</h2>
+        <p>Preencha os dados da viagem.</p>
+      </div>
+
+      <form id="quote-form">
+        <label for="nome">Seu nome *</label>
+        <input id="nome" name="nome" type="text"
+               maxlength="120" autocomplete="name" required>
+
+        <label for="email">E-mail *</label>
+        <input id="email" name="email" type="email"
+               maxlength="180" autocomplete="email" required>
+
+        <label for="destino">Destino desejado *</label>
+        <select id="destino" name="destino" required>
+          <option value="">Selecione um destino</option>
+          <option value="Rio de Janeiro">Rio de Janeiro</option>
+          <option value="Gramado">Gramado</option>
+          <option value="Lisboa">Lisboa</option>
+          <option value="Outro / quero sugestões">
+            Outro / quero sugestões
+          </option>
+        </select>
+
+        <label for="passageiros">Número de passageiros *</label>
+        <select id="passageiros" name="passageiros" required>
+          <option value="">Selecione</option>
+          <option value="1">1 passageiro</option>
+          <option value="2">2 passageiros</option>
+          <option value="3">3 passageiros</option>
+          <option value="4 ou mais">4 ou mais passageiros</option>
+        </select>
+
+        <div class="form-row">
+          <div>
+            <label for="ida">Data de ida</label>
+            <input id="ida" name="ida" type="date">
+          </div>
+          <div>
+            <label for="volta">Data de volta</label>
+            <input id="volta" name="volta" type="date">
+          </div>
+        </div>
+
+        <label for="orcamento">Orçamento estimado por pessoa</label>
+        <select id="orcamento" name="orcamento">
+          <option value="">Ainda não definido</option>
+          <option value="Até R$ 1.500">Até R$ 1.500</option>
+          <option value="R$ 1.500 a R$ 3.000">
+            R$ 1.500 a R$ 3.000
+          </option>
+          <option value="R$ 3.000 a R$ 6.000">
+            R$ 3.000 a R$ 6.000
+          </option>
+          <option value="Acima de R$ 6.000">Acima de R$ 6.000</option>
+        </select>
+
+        <label for="observacoes">Observações</label>
+        <textarea id="observacoes" name="observacoes"
+                  rows="3" maxlength="1000"
+                  placeholder="Conte mais sobre sua viagem"></textarea>
+
+        <button class="submit-button" type="submit">
+          Enviar solicitação
+        </button>
+
+        <p id="form-message" class="form-message"
+           role="status" aria-live="polite"></p>
+
+        <p class="small-note">
+          A solicitação não representa uma reserva confirmada.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Destino Certo</strong>
+    <span>Agência de Viagens · Projeto acadêmico</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

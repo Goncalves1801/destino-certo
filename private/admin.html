@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel administrativo | Destino Certo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="admin-dashboard-page">
+  <header class="topbar admin-dashboard-topbar">
+    <a class="brand" href="/">Destino Certo <span class="admin-brand-tag">Administração</span></a>
+    <div class="admin-top-actions">
+      <a class="admin-back-link" href="/">Voltar ao site</a>
+      <button class="logout-button" id="logout-button" type="button">Sair</button>
+    </div>
+  </header>
+
+  <main class="admin-layout">
+    <section class="admin-heading-row">
+      <div class="panel-heading">
+        <h1>Solicitações de viagem</h1>
+        <p>Consulte os dados enviados pelos clientes e aprove ou recuse cada solicitação pendente.</p>
+      </div>
+      <button class="refresh-button" id="refresh-button" type="button">Atualizar lista</button>
+    </section>
+
+    <section class="admin-stats" aria-label="Resumo das solicitações">
+      <article class="stat-card"><span>Total</span><strong id="count-total">—</strong></article>
+      <article class="stat-card"><span>Pendentes</span><strong id="count-pending">—</strong></article>
+      <article class="stat-card"><span>Aprovadas</span><strong id="count-approved">—</strong></article>
+      <article class="stat-card"><span>Recusadas</span><strong id="count-rejected">—</strong></article>
+    </section>
+
+    <section class="admin-list-panel panel">
+      <div class="admin-list-toolbar">
+        <div>
+          <h2>Pedidos dos clientes</h2>
+          <p>Uma solicitação pode ser decidida apenas uma vez.</p>
+        </div>
+        <label class="filter-label" for="status-filter">
+          Filtrar
+          <select id="status-filter">
+            <option value="todos">Todos os status</option>
+            <option value="pendente">Pendentes</option>
+            <option value="aprovada">Aprovadas</option>
+            <option value="recusada">Recusadas</option>
+          </select>
+        </label>
+      </div>
+
+      <p id="admin-message" class="form-message" role="status" aria-live="polite"></p>
+      <div id="request-list" class="request-list" aria-live="polite">
+        <p class="empty-state">Carregando solicitações...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Destino Certo</strong>
+    <span>Painel administrativo · Dados restritos</span>
+  </footer>
+
+  <script src="/admin/app.js"></script>
+</body>
+</html>
